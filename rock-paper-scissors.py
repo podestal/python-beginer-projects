@@ -3,14 +3,13 @@
 import random
 
 movesList = ['Rock', 'Paper', 'Scissors']
-# machineGuess = random.randint(0,2)
 
 print('Welcome to the game pick the following numbers.')
 print('1 -> Rock')
 print('2 -> Paper')
 print('3 -> Scissors')
 
-machine = movesList[0]
+machine = movesList[random.randint(0,2)]
 userGuess = movesList[int(input('Which one do you choose: ')) - 1]
 
 print('You choose: ', userGuess)
