@@ -9,7 +9,7 @@ numbers = []
 for number in range(0,10):
     numbers.append(number)
 
-simbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
+symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
 nLetters = int(input('How many letters would you like: '))
 nNumbers = int(input('How many numbers would you like: '))
@@ -19,16 +19,13 @@ i = 0
 
 for index in range(0, totalChars):
     if nLetters > 0:
-        idx = random.randint(0, len(letters) - 1)
-        password.append(letters[idx])
+        password.append(random.choice(letters))
         nLetters -= 1
     elif nNumbers > 0:
-        idx = random.randint(0, len(numbers) - 1)
-        password.insert(random.randint(0, len(password) - 1), str(numbers[idx]))
+        password.insert(random.randint(0, len(password) - 1), str(random.choice(numbers)))
         nNumbers -= 1
     elif nSymbols > 0:
-        idx = random.randint(0, len(simbols) - 1)
-        password.insert(random.randint(0, len(password) - 1), simbols[idx])
+        password.insert(random.randint(0, len(password) - 1), random.choice(symbols))
         nSymbols -= 1
 
 strPassword = ''.join(password)
