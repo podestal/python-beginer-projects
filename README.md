@@ -5,3 +5,4 @@ This repostitory is going to hold a list of beginer python prjects, each project
 3. FizzBuzz -> Functions
 4. Caesar Cipher -> Functions
 5. Secrete Auction -> Dictionaries
+6. Number Guessing -> Scope
